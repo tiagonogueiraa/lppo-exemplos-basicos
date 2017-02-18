@@ -30,7 +30,7 @@ public class AtualizaRegistros {
                             //mandar comandos após a conexão ter sido feita
                             //comando, apenas diminuir os que estiverem acima de 100
                             String sql = "UPDATE produto SET qtd = qtd -1, atualizado = CURRENT_TIMESTAMP"
-                                    + " WHERE qtd > 50";
+                                    + " WHERE qtd < 50";
                             Statement operacao = conexao.createStatement();
                                 //executar uma ação ou uma query
                                 Integer n = operacao.executeUpdate(sql);
